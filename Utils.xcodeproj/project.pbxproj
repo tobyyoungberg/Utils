@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F1FF6CA2322DE2600A8F6FE /* FirestoreWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1FF6C92322DE2600A8F6FE /* FirestoreWrapper.swift */; };
 		4F719896231702EE00A9066E /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F71988C231702EE00A9066E /* Utils.framework */; };
 		4F71989B231702EE00A9066E /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F71989A231702EE00A9066E /* UtilsTests.swift */; };
 		4F71989D231702EE00A9066E /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F71988F231702EE00A9066E /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -15,7 +16,6 @@
 		4F7198AE2317039900A9066E /* ImageDownloaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7198AC2317039900A9066E /* ImageDownloaderProtocol.swift */; };
 		4F7198AF2317039900A9066E /* WebRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7198AD2317039900A9066E /* WebRequestProtocol.swift */; };
 		4F7198B22317042100A9066E /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7198B12317042100A9066E /* Swinject.framework */; };
-		4F7198B32317042100A9066E /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7198B12317042100A9066E /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,21 +28,8 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		4F7198B42317042100A9066E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4F7198B32317042100A9066E /* Swinject.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		4F1FF6C92322DE2600A8F6FE /* FirestoreWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreWrapper.swift; sourceTree = "<group>"; };
 		4F71988C231702EE00A9066E /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F71988F231702EE00A9066E /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		4F719890231702EE00A9066E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,6 +107,7 @@
 			children = (
 				4F7198AC2317039900A9066E /* ImageDownloaderProtocol.swift */,
 				4F7198AD2317039900A9066E /* WebRequestProtocol.swift */,
+				4F1FF6C92322DE2600A8F6FE /* FirestoreWrapper.swift */,
 			);
 			path = interfaces;
 			sourceTree = "<group>";
@@ -163,7 +151,6 @@
 				4F719888231702EE00A9066E /* Sources */,
 				4F719889231702EE00A9066E /* Frameworks */,
 				4F71988A231702EE00A9066E /* Resources */,
-				4F7198B42317042100A9066E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +243,7 @@
 				4F7198AA2317038700A9066E /* Container.swift in Sources */,
 				4F7198AB2317038700A9066E /* Injected.swift in Sources */,
 				4F7198AE2317039900A9066E /* ImageDownloaderProtocol.swift in Sources */,
+				4F1FF6CA2322DE2600A8F6FE /* FirestoreWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +389,7 @@
 		4F7198A1231702EE00A9066E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -432,7 +420,7 @@
 		4F7198A2231702EE00A9066E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
