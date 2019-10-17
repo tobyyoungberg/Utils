@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol Route {
+public protocol Route {
     static func routeForPathComponents(pathComponents: [String]) -> Self?
 }
 
-protocol Routable {
+public protocol Routable {
     associatedtype RouteType: Route
     func routeTo(route: RouteType)
 }

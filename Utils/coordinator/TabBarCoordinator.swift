@@ -4,12 +4,12 @@
 
 import UIKit
 
-protocol TabBarCoordinator: Coordinator {
+public protocol TabBarCoordinator: Coordinator {
     var tabBarController: UITabBarController { get }
     var tabs: [TabCoordinator] { get }
 }
 
-protocol TabCoordinator: Coordinator {
+public protocol TabCoordinator: Coordinator {
     var navigationController: UINavigationController { get }
     var tabImage: UIImage? { get }
     var tabTitle: String? { get }
@@ -17,7 +17,7 @@ protocol TabCoordinator: Coordinator {
     func configureTab()
 }
 
-extension TabBarCoordinator {
+public extension TabBarCoordinator {
     var rootViewController: UIViewController {
         return tabBarController
     }
@@ -32,7 +32,7 @@ extension TabBarCoordinator {
     }
 }
 
-extension TabCoordinator {
+public extension TabCoordinator {
     var rootViewController: UIViewController {
         return navigationController
     }

@@ -4,17 +4,17 @@
 
 import UIKit
 
-protocol Coordinator: AnyObject {
+public protocol Coordinator: AnyObject {
     var rootViewController: UIViewController { get }
     func start()
 }
 
-protocol ParentCoordinator: Coordinator {
+public protocol ParentCoordinator: Coordinator {
     var childCoordinators: [Coordinator] { get set }
     func childCoordinatorDidFinish(_ child: Coordinator)
 }
 
-extension ParentCoordinator {
+public extension ParentCoordinator {
     func childCoordinatorDidFinish(_ child: Coordinator) {
         for (index, coordinator) in childCoordinators.enumerated() {
             if child === coordinator {
@@ -24,12 +24,12 @@ extension ParentCoordinator {
     }
 }
 
-protocol ChildCoordinator: Coordinator {
+public protocol ChildCoordinator: Coordinator {
     var parentCoordinator: ParentCoordinator? { get }
     func finish()
 }
 
-extension ChildCoordinator {
+public extension ChildCoordinator {
     func finish() {
         parentCoordinator?.childCoordinatorDidFinish(self)
     }
