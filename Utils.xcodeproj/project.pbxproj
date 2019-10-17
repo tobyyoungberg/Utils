@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4F1FF6CA2322DE2600A8F6FE /* FirestoreWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1FF6C92322DE2600A8F6FE /* FirestoreWrapper.swift */; };
+		4F6488DE2358AA2700296530 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6488DC2358AA2700296530 /* Coordinator.swift */; };
+		4F6488DF2358AA2700296530 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6488DD2358AA2700296530 /* TabBarCoordinator.swift */; };
+		4F6488E22358AA4700296530 /* Routeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6488E12358AA4700296530 /* Routeable.swift */; };
 		4F719896231702EE00A9066E /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F71988C231702EE00A9066E /* Utils.framework */; };
 		4F71989B231702EE00A9066E /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F71989A231702EE00A9066E /* UtilsTests.swift */; };
 		4F71989D231702EE00A9066E /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F71988F231702EE00A9066E /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		4F1FF6C92322DE2600A8F6FE /* FirestoreWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreWrapper.swift; sourceTree = "<group>"; };
+		4F6488DC2358AA2700296530 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4F6488DD2358AA2700296530 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		4F6488E12358AA4700296530 /* Routeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routeable.swift; sourceTree = "<group>"; };
 		4F71988C231702EE00A9066E /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F71988F231702EE00A9066E /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		4F719890231702EE00A9066E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +69,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F6488DB2358AA1800296530 /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				4F6488DC2358AA2700296530 /* Coordinator.swift */,
+				4F6488DD2358AA2700296530 /* TabBarCoordinator.swift */,
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
+		4F6488E02358AA3B00296530 /* routing */ = {
+			isa = PBXGroup;
+			children = (
+				4F6488E12358AA4700296530 /* Routeable.swift */,
+			);
+			path = routing;
+			sourceTree = "<group>";
+		};
 		4F719882231702EE00A9066E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +108,8 @@
 		4F71988E231702EE00A9066E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4F6488E02358AA3B00296530 /* routing */,
+				4F6488DB2358AA1800296530 /* coordinator */,
 				4F7198A72317035400A9066E /* ioc-container */,
 				4F7198A62317034D00A9066E /* interfaces */,
 				4F71988F231702EE00A9066E /* Utils.h */,
@@ -241,7 +266,10 @@
 			files = (
 				4F7198AF2317039900A9066E /* WebRequestProtocol.swift in Sources */,
 				4F7198AA2317038700A9066E /* Container.swift in Sources */,
+				4F6488DE2358AA2700296530 /* Coordinator.swift in Sources */,
+				4F6488DF2358AA2700296530 /* TabBarCoordinator.swift in Sources */,
 				4F7198AB2317038700A9066E /* Injected.swift in Sources */,
+				4F6488E22358AA4700296530 /* Routeable.swift in Sources */,
 				4F7198AE2317039900A9066E /* ImageDownloaderProtocol.swift in Sources */,
 				4F1FF6CA2322DE2600A8F6FE /* FirestoreWrapper.swift in Sources */,
 			);
